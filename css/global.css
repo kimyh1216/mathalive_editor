@@ -12,8 +12,33 @@ header .btn-preview{margin-left: auto;}
 .gnb>ul>li>.submenu button {text-align: left;padding: 10px 15px;}
 .gnb>ul>li>.submenu button:hover{background-color: #ddd;}
 
-.btn-preview{display: flex; align-items: center;justify-content: center;height:40px;border:0;padding: 0 10px;background-color: #84ce05;border-radius: 5px;color: #fff;}
+/* buttons */
+.btn-preview{display: flex; align-items: center;justify-content: center;height:35px;border:0;padding: 0 10px;background-color: #84ce05;border-radius: 5px;color: #fff;}
 .btn-preview:hover{background-color: #619a00;}
 .btn-preview i {margin-right: 5px;}
+.btn-plus {}
 
+.tools {display: flex;height:48px;border-bottom: 1px solid #ccc;justify-content: space-between;align-items: center;}
+.tools>div{flex: 1;}
+.tools .main button {width: 32px;height:32px;margin:0 5px;font-size: 1.2rem;color: #333;border-radius: 5px;}
+.tools .main button:hover{background-color: #ddd;}
+.tools .viewer{display: flex;align-items: center; justify-content: center;}
+.tools .viewer select{height:49px;padding: 0 10px; border:1px solid #ccc;}
+.tools .viewer select option {height:30px;}
+.tools .history {text-align: right;}
 
+.select2-container {
+    height: 39px; /* 원하는 높이 설정 */
+}
+.select2-container .select2-selection--single {
+    height: 100%; /* 옵션의 높이를 100%로 설정 */
+  }
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    line-height: 36px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    top:6px;right: 6px;
+}
+.page-manage{
+    border:1px solid red;
+}

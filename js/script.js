@@ -10,4 +10,7 @@ $(document).ready(function(){
             $('.submenu.active').removeClass('active');
         }
     });
+    $('.js-example-basic-single').select2({
+        minimumResultsForSearch: -1 // 검색 박스를 비활성화
+      });
 });

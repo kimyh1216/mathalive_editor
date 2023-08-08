@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathalive Editor</title>
     <link href="css/reset.css" rel="stylesheet"/>
-    <link href="css/global.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css" rel="stylesheet" />
+    <link href="css/global.css" rel="stylesheet"/>
     <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/js/select2.min.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
@@ -63,5 +65,32 @@
             <i class="fas fa-eye"></i>미리보기
         </button>
     </header>
+    <div class="tools">
+        <div class="main">
+            <button class="btn-plus"><i class="fas fa-plus"></i></button>
+            <button class="btn-layer"><i class="fas fa-layer-group"></i></button>
+            <button class="btn-global"><i class="fas fa-globe"></i></button>
+            <button class="btn-page"><i class="fas fa-file"></i></button>
+            <button class="btn-style"><i class="fas fa-paint-brush"></i></button>
+            <button class="btn-app"><i class="fas fa-th"></i></button>
+            <button class="btn-cms"><i class="fas fa-edit"></i></button>
+        </div>
+        <div class="viewer">
+            <select class="js-example-basic-single" style="width: 150px;">
+                <option value="1">Home</option>
+                <option value="2" class="page-manage">페이지 관리</option>
+              </select>
+            <div class="responsive">
+                <button class="btn-pc"><i class="fas fa-desktop"></i></button>
+                <button class="btn-tablet"><i class="fas fa-tablet-alt"></i></button>
+                <button class="btn-smartphone"><i class="fas fa-mobile-alt"></i></button>
+                <button class="btn-customsize"></button>
+            </div>
+            <div class="width">너비
+                <input type="text"><span>px</span>
+            </div>
+        </div>
+        <div class="history">3dsaddsa sads dsad sad a</div>
+    </div>
 </body>
 </html>

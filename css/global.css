@@ -85,7 +85,7 @@ header .btn-preview{margin-left: auto;}
     min-width: 140px;
     padding: 10px 0;
 }
-.editor_content .sliding-panel .dep-2 li.on {
+.editor_content .sliding-panel .dep-2 li.active {
     color: #3374eb;
     background-color: #dce9ff;
 }
@@ -97,6 +97,7 @@ header .btn-preview{margin-left: auto;}
     color: #333;
 }
 .editor_content .sliding-panel.left .view-menu-item {
+    height: 100%;
     border-right: 1px solid #e3e3e3;
 }
 
@@ -109,6 +110,9 @@ header .btn-preview{margin-left: auto;}
 .editor_content .sliding-panel .view-menu-item {
     width: 360px;
 }
+.editor_content .sliding-panel .view-menu-item ul{height:100%;}
+.editor_content .sliding-panel .view-menu-item>ul>li {display: none;height: 100%;}
+.editor_content .sliding-panel .view-menu-item>ul>li.active {display: block;}
 .editor_content .sliding-panel .view-menu-item .top {
     height: 50px;
     border-bottom: 1px solid #e3e3e3;
@@ -138,3 +142,10 @@ header .btn-preview{margin-left: auto;}
     left: 0;
     transform: translateX(-100%);
 }
+.editor_content .item-content {height:calc(100% - 50px);}
+.quick-add ul {display: grid;grid-template-columns: repeat(3, 1fr);gap: 10px;padding:20px;}
+.quick-add ul li {height: 100px;}
+.quick-add ul li button {width: 100%;height:100%; border:1px solid #ccc;border-radius: 5px;letter-spacing: -1px;font-size: 12px;}
+.quick-add ul li button:hover {border-color:#000;}
+.quick-add ul li button i{display: block;font-size: 20px;margin-bottom: 15px;}
+

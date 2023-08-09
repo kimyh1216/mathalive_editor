@@ -13,7 +13,14 @@ $(document).ready(function(){
     $('.js-example-basic-single').select2({
         minimumResultsForSearch: -1 // 검색 박스를 비활성화
     });
-    $('.tools .main .btn-plus').on('click',function(){
+    $('.tools .main .btn-plus, .view-menu-item .btn_close').on('click',function(){
         $('.sliding-panel').toggleClass('slide-on');
-    })
+    });
+    
+    $('.dep-2 ul li').click(function() {
+        var index = $(this).index();
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.view-menu-item>ul>li').eq(index).addClass('active').siblings().removeClass('active');
+    });
+
 });

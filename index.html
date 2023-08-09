@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathalive Editor</title>
-    <link href="css/reset.css" rel="stylesheet"/>
+    <link href="css/reset.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css" rel="stylesheet" />
-    <link href="css/global.css" rel="stylesheet"/>
+    <link href="css/global.css" rel="stylesheet" />
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/js/select2.min.js"></script>
     <script src="js/script.js"></script>
 </head>
+
 <body>
     <header>
         <a href="#" class="logo"><img src="./images/logo_mathalive.png"></a>
@@ -79,18 +81,69 @@
             <select class="js-example-basic-single" style="width: 150px;">
                 <option value="1">Home</option>
                 <option value="2" class="page-manage">페이지 관리</option>
-              </select>
+            </select>
             <div class="responsive">
-                <button class="btn-pc"><i class="fas fa-desktop"></i></button>
+                <button class="btn-pc active"><i class="fas fa-desktop"></i></button>
                 <button class="btn-tablet"><i class="fas fa-tablet-alt"></i></button>
                 <button class="btn-smartphone"><i class="fas fa-mobile-alt"></i></button>
                 <button class="btn-customsize"></button>
             </div>
-            <div class="width">너비
+            <div class="width warn">너비
                 <input type="text"><span>px</span>
+                <div class="txt_cloud">해당 화면 중단점은 320px - 10000px 사이로 지정해주세요.</div>
             </div>
         </div>
-        <div class="history">3dsaddsa sads dsad sad a</div>
+        <div class="history">
+            <ul>
+                <li>
+                    <button class="btn-zoom"><i class="fa fa-search"></i></button>
+                    <div class="txt_cloud zoom">
+                        <button class="btn-minus"><i class="fa fa-minus"></i></button>
+                        <div class="percent">100%</div>
+                        <button class="btn-minus"><i class="fa fa-plus"></i></button>
+                        <button class="btn-reset">초기화</button>
+                    </div>
+                </li>
+                <li>
+                    <button class="btn-prev"><i class="fa fa-arrow-left"></i></button>
+                    <button class="btn-prev"><i class="fa fa-arrow-right"></i></button>
+                </li>
+                <li>
+                    <button class="btn-setting"><i class="fa fa-cog"></i></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="editor_content">
+        <div class="stage" style="width: calc(1430px);transform: scale(1) translateZ(0px);">
+            <div class="inner"
+                style="width: 1374px;margin: 24px 28px;transform: scale(1) translateZ(0px);transform-origin: left top;height: calc((100% - 24px) - 24px);">
+                <iframe src="inner.html"></iframe>
+            </div>
+            <div class="drag-btn left">
+                <div class="bar"></div>
+            </div>
+            <div class="drag-btn right">
+                <div class="bar"></div>
+            </div>
+        </div>
+        <div class="sliding-panel hor left slide-on">
+            <div class="dep-2">
+                <ul>
+                    <li class="on">서브메뉴A</li>
+                    <li>서브메뉴B</li>
+                    <li>서브메뉴C</li>
+                    <li>서브메뉴D</li>
+                </ul>
+            </div>
+            <div class="view-menu-item">
+                <div class="top hor-center">
+                    <h3>서브메뉴A</h3><button class="btn_close">닫기</button>
+                </div>
+                <div class="item-content"></div>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>

@@ -12,5 +12,8 @@ $(document).ready(function(){
     });
     $('.js-example-basic-single').select2({
         minimumResultsForSearch: -1 // 검색 박스를 비활성화
-      });
+    });
+    $('.tools .main .btn-plus').on('click',function(){
+        $('.sliding-panel').toggleClass('slide-on');
+    })
 });

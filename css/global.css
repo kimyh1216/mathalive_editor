@@ -2,6 +2,14 @@
 html,body{height: 100%;}
 header{display: flex;align-items: center;height:50px;padding-right: 10px;border-bottom: 1px solid #ccc;}
 header .btn-preview{margin-left: auto;}
+h1,h2,h3,h4,h5,h6{font-weight: bold;}
+h1{font-size: 3.5rem;}
+h2{font-size: 3rem;}
+h3{font-size: 2.5rem;}
+h4{font-size: 2rem;}
+h5{font-size: 1.5rem;}
+h6{font-size: 1rem;}
+
 .logo{display: inline-block;padding:10px 20px;border-right: 1px solid #ccc;}
 .logo img {width: 53px;}
 .gnb>ul{display: flex;align-items: center;}
@@ -85,6 +93,10 @@ header .btn-preview{margin-left: auto;}
     min-width: 140px;
     padding: 10px 0;
 }
+.editor_content .sliding-panel .dep-2 li:hover,
+.editor_content .sliding-panel .dep-3 li:hover{
+    background-color: #eee;
+}
 .editor_content .sliding-panel .dep-2 li.active {
     color: #3374eb;
     background-color: #dce9ff;
@@ -100,17 +112,40 @@ header .btn-preview{margin-left: auto;}
     height: 100%;
     border-right: 1px solid #e3e3e3;
 }
-
+.editor_content .sliding-panel .dep-3 {
+    overflow-y: auto;
+    min-width: 100px;
+    padding: 10px 0;
+    border-right: 1px solid #e3e3e3;
+}
+.editor_content .sliding-panel .dep-3.active{
+    display: block;
+}
+.editor_content .sliding-panel .dep-3 .tit{
+    margin: 10px;
+    font-size: .7rem;
+    color:#666;
+}
+.editor_content .sliding-panel .dep-3 ul li{
+    padding:10px;
+    font-size: .8rem;
+    cursor: pointer;
+}
+.editor_content .sliding-panel .dep-3 li.active {
+    color: #3374eb;
+    background-color: #dce9ff;
+}
 .editor_content .sliding-panel .view-menu-item {
-    width: 360px;
+    min-width: 360px;
 }
 .editor_content .sliding-panel.left .view-menu-item {
     border-right: 1px solid #e3e3e3;
 }
-.editor_content .sliding-panel .view-menu-item {
-    width: 360px;
+.editor_content .sliding-panel .view-menu-item .in_depth{
+    display: flex;
+    height: 100%;
 }
-.editor_content .sliding-panel .view-menu-item ul{height:100%;}
+.editor_content .sliding-panel .view-menu-item>ul{height:100%;}
 .editor_content .sliding-panel .view-menu-item>ul>li {display: none;height: 100%;}
 .editor_content .sliding-panel .view-menu-item>ul>li.active {display: block;}
 .editor_content .sliding-panel .view-menu-item .top {
@@ -142,10 +177,33 @@ header .btn-preview{margin-left: auto;}
     left: 0;
     transform: translateX(-100%);
 }
-.editor_content .item-content {height:calc(100% - 50px);}
+.editor_content .item-content {overflow-y:auto;width: 357px;height:calc(100% - 50px);padding:20px;}
+.editor_content .item-content .tit {font-size: .9rem;padding-bottom: 20px;}
+.editor_content .item-content ul li ul li {padding:10px 0;}
+.editor_content .item-content>ul>li {display:none;flex-direction: column;}
+.editor_content .item-content>ul>li.active{display: flex;}
 .quick-add ul {display: grid;grid-template-columns: repeat(3, 1fr);gap: 10px;padding:20px;}
 .quick-add ul li {height: 100px;}
 .quick-add ul li button {width: 100%;height:100%; border:1px solid #ccc;border-radius: 5px;letter-spacing: -1px;font-size: 12px;}
 .quick-add ul li button:hover {border-color:#000;}
 .quick-add ul li button i{display: block;font-size: 20px;margin-bottom: 15px;}
 
+.list_emptybox {display: grid;grid-template-columns: repeat(2, 1fr);max-width: 315px;}
+.list_emptybox img{width:100%;}
+.list_grid {display: grid;grid-template-columns: repeat(2, 1fr);max-width: 315px;}
+.list_grid img {width: 100%;}
+
+.list_texttheme .p4 {font-size: 1.2rem;}
+.list_texttheme .p5 {font-size: 1rem;}
+.list_texttheme .p6 {font-size: 0.8rem;}
+
+.title_type_01 {font-size: 2.5rem;}
+.title_type_02 {font-size: 2rem;font-weight: bold;}
+.title_type_03 {font-size: 3rem;}
+.title_type_04 {text-transform: uppercase;font-weight: bold;font-size: 1.5rem;}
+.title_type_05 {font-size: 2rem; font-family: math;}
+.title_type_06 {font-size: 1.3rem; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+.title_type_07 {font-size: 1.3rem; font-family: Arial, Helvetica, sans-serif;}
+.title_type_08 {font-size: .9rem;font-weight: bold;}
+.title_type_09 {font-size: .9rem;font-weight: bold;}
+.title_type_10 {font-size: .9rem;font-weight: bold;}

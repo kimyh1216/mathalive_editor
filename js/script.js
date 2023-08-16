@@ -22,5 +22,12 @@ $(document).ready(function(){
         $(this).addClass('active').siblings().removeClass('active');
         $('.view-menu-item>ul>li').eq(index).addClass('active').siblings().removeClass('active');
     });
+    $(".dep-3 ul li").click(function() {
+        var allLi = $(this).parents('.dep-3').find('li');
+        var liIndex = allLi.index($(this));
+        allLi.removeClass('active');
+        $(this).addClass('active');
+        $(this).parents('.dep-3').next().find('.item-content>ul>li').eq(liIndex).addClass('active').siblings().removeClass('active');
+    });
 
 });

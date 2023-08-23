@@ -1,0 +1,8 @@
+body{margin:0;padding: 0;}
+button{cursor: pointer;}
+.img-set {position: absolute;transform: translate(-50%,-50%);}
+.control-box{padding:0 10px;background-color: #fff;box-shadow: 1px 0px 10px rgba(0,0,0,.3);border-radius: 5px;}
+.control-box .btn-control {height:40px;padding:0 10px;color:#333;background-color: #fff;border: 0;}
+.control-box .btn-control:hover{background-color: #ddd;}
+.control-box .btn-control.image{border-right: 1px solid #ddd;}
+

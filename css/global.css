@@ -190,10 +190,16 @@ h6{font-size: 1rem;}
 
 .list_emptybox {display: grid;grid-template-columns: repeat(2, 1fr);max-width: 315px;}
 .list_emptybox img{width:100%;}
-.list_grid {display: grid;grid-template-columns: repeat(2, 1fr);max-width: 315px;}
+.list_grid {display: grid;grid-template-columns: repeat(2, 1fr);gap:10px;max-width: 315px;}
+.list_grid li {position: relative;padding: 0 !important;}
 .list_grid .oneline{grid-column: 1 / span 2;}
 .list_grid img {width: 100%;}
-
+.list_grid.movie li:after {content:"";position: absolute;left:50%;top:50%;width:40px;height:40px;background:url(../images/ico_play.png) no-repeat center;background-size: cover;transform: translate(-50%,-50%);}
+.list_grid.movie li p {margin:5px 0 10px;text-align: center;font-size: .8rem;}
+.list_grid.movie li.youtube:before{content:"";position: absolute;left:0;bottom:30px;width:40px;height: 30px;background:#fff url(../images/ico_youtube.png) no-repeat center;background-size: 20px auto;border-radius: 0 5px 0 0;}
+.list_grid.movie li.vimeo:before{content:"";position: absolute;left:0;bottom:30px;width:40px;height: 30px;background:#fff url(../images/ico_vimeo.png) no-repeat center;background-size: 20px auto;border-radius: 0 5px 0 0;}
+.list_grid.movie li.facebook:before{content:"";position: absolute;left:0;bottom:30px;width:40px;height: 30px;background:#fff url(../images/ico_facebook.png) no-repeat center;background-size: 20px auto;border-radius: 0 5px 0 0;}
+.list_grid.movie li.dailymotion:before{content:"";position: absolute;left:0;bottom:30px;width:40px;height: 30px;background:#fff url(../images/ico_dailymotion.png) no-repeat center;background-size: 20px auto;border-radius: 0 5px 0 0;}
 .list_texttheme .p4 {font-size: 1.2rem;}
 .list_texttheme .p5 {font-size: 1rem;}
 .list_texttheme .p6 {font-size: 0.8rem;}
@@ -356,3 +362,8 @@ h6{font-size: 1rem;}
 .btn_stl.s06 {width:60px;height:60px;min-width: auto;background-color: #000;color:#fff;border-radius: 100%;}
 .btn_stl.s07 {width:60px;height:60px;min-width: auto;background-color: #000;color:#fff;border-radius: 100%;}
 .btn_stl.s08 {width:60px;height:60px;min-width: auto;background-color: #000;color:#fff;border-radius: 100%;}
+
+.btn_upload {min-width: auto;width:45px; background-color: #619a00;border-radius: 100%;color: #fff;}
+.btn_sns {min-width: auto;width:45px; border-radius: 100%;box-shadow: 2px 2px 5px rgba(0,0,0,.2);}
+
+.list_mymedia {display: flex;justify-content: space-around;}

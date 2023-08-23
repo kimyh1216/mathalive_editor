@@ -127,7 +127,8 @@
                 <div class="bar"></div>
             </div>
         </div>
-        <div class="sliding-panel hor left slide-on">
+        <div class="sliding-panel hor left">
+            <!--  slide-on으로 제어하세요. -->
             <div class="dep-2">
                 <ul>
                     <li class="active">빠른 추가</li>
@@ -572,10 +573,110 @@
                         </div>
                     </li>
                     <li>
-                        <div class="top hor-center">
-                            <h3>미디어</h3><button class="btn_close">닫기</button>
+                        <div class="in_depth">
+                            <div class="dep-3">
+                                <div class="tit">미디어 업로드</div>
+                                <ul>
+                                    <li>내 업로드</li>
+                                </ul>
+                                <div class="tit">이미지</div>
+                                <ul>
+                                    <li>단일 이미지</li>
+                                </ul>
+                                <div class="tit">동영상</div>
+                                <ul>
+                                    <li>싱글 동영상 플레이어</li>
+                                </ul>
+                                <div class="tit">오디오</div>
+                                <ul>
+                                    <li>미니 플레이어</li>
+                                </ul>
+                            </div>
+                            <div class="cnt">
+                                <div class="top hor-center">
+                                    <h3>버튼 추가</h3><button class="btn_close">닫기</button>
+                                </div>
+                                <div class="item-content">
+                                    <ul>
+                                        <li class="active">
+                                            <div class="tit">내 미디어 업로드</div>
+                                            <ul class="list_mymedia">
+                                                <li><button class="btn btn_upload"><i class="fas fa-upload"></i>
+                                                </button></li>
+                                                <li><button class="btn btn_sns"><svg width="14" height="26" viewBox="0 0 14 26" class="symbol symbol-media-manager-panel-facebook-icon"><path fill="#3C5A99" d="M8.592 25.455V13.843h3.902l.584-4.525H8.592V6.43c0-1.31.364-2.203 2.245-2.203l2.4-.001V.178C12.82.123 11.396 0 9.74 0 6.28 0 3.912 2.109 3.912 5.981v3.337H0v4.525h3.912v11.612h4.68z"></path></svg></i>
+                                                </button></li>
+                                                <li><button class="btn btn_sns"><svg width="24" height="24" viewBox="0 0 24 24" class="symbol symbol-media-manager-panel-instagram-icon"><defs><radialGradient id="mmgr-panel-instagram-icon-a" cx="1.819%" cy="90.845%" r="144.58%" fx="1.819%" fy="90.845%"><stop offset="0%" stop-color="#FED576"></stop><stop offset="26.34%" stop-color="#F47133"></stop><stop offset="60.91%" stop-color="#BC3081"></stop><stop offset="100%" stop-color="#4C63D2"></stop></radialGradient><radialGradient id="mmgr-panel-instagram-icon-b" cx="1.814%" cy="90.83%" r="144.608%" fx="1.814%" fy="90.83%"><stop offset="0%" stop-color="#FED576"></stop><stop offset="26.34%" stop-color="#F47133"></stop><stop offset="60.91%" stop-color="#BC3081"></stop><stop offset="100%" stop-color="#4C63D2"></stop></radialGradient></defs><g fill="none"><path fill="url(#mmgr-panel-instagram-icon-a)" d="M4.141.63a5.884 5.884 0 00-2.126 1.385A5.868 5.868 0 00.629 4.137C.332 4.9.132 5.772.073 7.05.015 8.33 0 8.738 0 11.998c0 3.259.015 3.669.073 4.947.059 1.278.264 2.152.556 2.913.308.79.717 1.459 1.386 2.127a5.884 5.884 0 002.126 1.386c.761.297 1.635.497 2.913.556C8.332 23.985 8.74 24 12 24c3.259 0 3.668-.015 4.946-.073 1.278-.059 2.152-.264 2.913-.556a5.884 5.884 0 002.126-1.386 5.886 5.886 0 001.386-2.127c.297-.761.497-1.635.556-2.913.058-1.278.073-1.688.073-4.947 0-3.26-.015-3.67-.073-4.948-.059-1.278-.264-2.151-.556-2.913a5.918 5.918 0 00-1.38-2.122A5.884 5.884 0 0019.862.629c-.76-.297-1.634-.497-2.912-.556C15.673.015 15.263 0 12.005 0 8.746 0 8.337.015 7.059.073 5.776.127 4.902.332 4.14.63zm12.708 1.6c1.17.053 1.805.249 2.229.414.561.22.961.479 1.38.898.42.42.679.82.898 1.381.166.424.361 1.059.415 2.23.058 1.263.068 1.644.068 4.85 0 3.205-.015 3.586-.068 4.85-.054 1.17-.249 1.804-.415 2.229-.22.561-.478.961-.897 1.38-.42.42-.82.679-1.381.898-.424.166-1.058.361-2.23.415-1.263.059-1.643.068-4.848.068s-3.585-.014-4.849-.068c-1.17-.054-1.805-.249-2.229-.415a3.738 3.738 0 01-1.38-.897c-.42-.42-.679-.82-.898-1.381-.166-.425-.361-1.059-.415-2.23-.058-1.263-.068-1.644-.068-4.85 0-3.205.015-3.586.068-4.85.054-1.17.249-1.805.415-2.229.22-.561.478-.961.897-1.38.42-.42.82-.679 1.381-.899.424-.165 1.058-.36 2.23-.414 1.262-.06 1.642-.07 4.848-.07s3.585.01 4.849.069z"></path><path fill="url(#mmgr-panel-instagram-icon-b)" d="M6 12a6 6 0 1012 0 6 6 0 00-12 0zm9.895 0a3.895 3.895 0 11-7.79 0 3.895 3.895 0 117.79 0z"></path><circle cx="18.5" cy="5.5" r="1.5" fill="#654C9F"></circle></g></svg></i>
+                                                </button></li>
+                                                <li><button class="btn btn_sns"><svg width="26" height="22" viewBox="0 0 26 22" class="symbol symbol-media-manager-panel-googledrive-icon"><g fill="none"><path fill="#537ABD" d="M25.564 14.929H8.453L4.564 22h16.868"></path><path fill="#2EB672" d="M9.304 0L.748 14.143 4.638 22l8.338-15.443"></path><path fill="#FED14B" d="M17.082 0H9.304l8.36 14.929h7.973L17.082 0"></path></g></svg></i>
+                                                </button></li>
+                                                <li><button class="btn btn_sns"><svg width="26" height="26" viewBox="0 0 26 26" class="symbol symbol-media-manager-panel-googlephotos-icon"><g fill="none"><path fill="#F44336" d="M20.042 13h-3.758A3.284 3.284 0 0113 9.716V.311c0-.118.142-.182.229-.1L20.042 6.5V13z"></path><path fill="#AD1457" d="M20.042 13h-3.758c-.777 0-1.492-.27-2.055-.722L20.042 6.5V13z"></path><path fill="#8BC34A" d="M5.958 13h3.758A3.284 3.284 0 0113 16.284v9.405c0 .118-.142.18-.229.1L5.958 19.5V13z"></path><path fill="#009688" d="M5.958 13h3.758c.777 0 1.492.27 2.055.722L5.958 19.5V13z"></path><path fill="#FFC107" d="M13 5.958v3.758A3.284 3.284 0 019.716 13H.311c-.118 0-.182-.142-.1-.229L6.5 5.958H13z"></path><path fill="#FF9800" d="M13 5.958v3.758c0 .777-.27 1.492-.722 2.055L6.5 5.958H13z"></path><path fill="#448AFF" d="M13 20.042v-3.758A3.284 3.284 0 0116.284 13h9.405c.118 0 .18.142.1.229L19.5 20.042H13z"></path><path fill="#1565C0" d="M13 20.042v-3.758c0-.777.27-1.492.722-2.055l5.778 5.813H13z"></path></g></svg></i>
+                                                </button></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="tit">단일 이미지</div>
+                                            <ul class="list_grid">
+                                                <li><img src="./images/thumb_img_01.jpg"></li>
+                                                <li><img src="./images/thumb_img_02.jpg"></li>
+                                                <li><img src="./images/thumb_img_03.jpg"></li>
+                                                <li><img src="./images/thumb_img_04.jpg"></li>
+                                                <li><img src="./images/thumb_img_05.jpg"></li>
+                                                <li><img src="./images/thumb_img_06.png"></li>
+                                                <li class="oneline"><img src="./images/thumb_img_07.jpg"></li>
+                                                <li><img src="./images/thumb_img_08.jpg"></li>
+                                                <li><img src="./images/thumb_img_09.jpg"></li>
+                                                <li><img src="./images/thumb_img_10.jpg"></li>
+                                                <li><img src="./images/thumb_img_11.jpg"></li>
+                                                <li><img src="./images/thumb_img_12.jpg"></li>
+                                                <li><img src="./images/thumb_img_13.jpg"></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="tit">싱글 동영상 플레이어</div>
+                                            <ul class="list_grid movie">
+                                                <li class="oneline"><img src="./images/thumb_movie_01.jpg"><p>동영상 업로드</p></li>
+                                                <li class="youtube"><img src="./images/thumb_movie_02.jpg"><p>Youtube</p></li>
+                                                <li class="vimeo"><img src="./images/thumb_movie_03.jpg"><p>Vimeo</p></li>
+                                                <li class="facebook"><img src="./images/thumb_movie_04.jpg"><p>Facebook</p></li>
+                                                <li class="dailymotion"><img src="./images/thumb_movie_05.jpg"><p>Dailymotion</p></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="tit">미니 플레이어</div>
+                                            <ul class="list_grid">
+                                                <li class="oneline"><img src="./images/mini-player_01.png"></li>
+                                                <li><img src="./images/mini-player_02.png"></li>
+                                                <li><img src="./images/mini-player_03.png"></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="tit">라이트박스</div>
+                                            <ul class="list_grid">
+                                                <ul>
+                                                    <li>라이트박스 내용</li>
+                                                </ul>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="tit">탭</div>
+                                            <ul class="list_grid">
+                                                <ul>
+                                                    <li>탭 내용</li>
+                                                </ul>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="tit">아코디언</div>
+                                            <ul class="list_grid">
+                                                <ul>
+                                                    <li>아코디언 내용</li>
+                                                </ul>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="item-content"></div>
                     </li>
                     <li>
                         <div class="top hor-center">

@@ -1,8 +1,144 @@
-body{margin:0;padding: 0;}
-button{cursor: pointer;}
-.img-set {position: absolute;transform: translate(-50%,-50%);}
+hr{height:1px;border: none;background-color: #ccc;}
+
+/* Scrollbar Custom*/
+::-webkit-scrollbar {width: 8px;}
+::-webkit-scrollbar-thumb {background-color: #aaa;border-radius: 5px;}
+::-webkit-scrollbar-thumb:hover {background-color: #999;}
+::-webkit-scrollbar-track {background-color: #ddd;border-radius: 5px;}
+
+/* Image Checkbox*/
+input[type=checkbox] {
+    display:none;
+}
+input[type=checkbox] + label { 
+    cursor: pointer;
+    height: 17px;
+    line-height: 17px;
+    padding-left: 23px; 
+    background-repeat: no-repeat;
+    background-image: url('../images/checker-off.png');
+    background-position: left center;
+}
+input[type=checkbox]:checked + label {
+    background-image: url('../images/checker-on.png');
+}
+input[type=checkbox]:disabled + label {
+    background-image: url('../images/checker-disabled.png');
+}
+input[type=radio] {
+    display:none;
+}
+input[type=radio] + label { 
+    cursor: pointer; 
+    height: 17px;
+    line-height: 17px;
+    padding-left: 23px; 
+    background-repeat: no-repeat;
+    background-image: url('../images/checker-off.png');
+    background-position: left center;
+}
+input[type=radio]:checked + label {
+    background-image: url('../images/checker-on.png');
+}
+input[type=radio]:disabled + label {
+    background-image: url('../images/checker-disabled.png');
+}
+
+
+.btn-close {width:30px;height:30px;background-color: #fff;border: 0;font-size: 1.2rem;}
+.btn-cancel {min-width: 60px;height:35px;line-height:35px; border:1px solid #ddd;border-radius: 5px;}
+.btn-ok {min-width: 60px;height:35px;line-height:35px; border:1px solid #ddd;background-color: #416504;color:#fff;border-radius: 5px;}
+.btn-ok:disabled {background-color: #eee;color:#999}
+.img-set {position: absolute;}
 .control-box{padding:0 10px;background-color: #fff;box-shadow: 1px 0px 10px rgba(0,0,0,.3);border-radius: 5px;}
 .control-box .btn-control {height:40px;padding:0 10px;color:#333;background-color: #fff;border: 0;}
 .control-box .btn-control:hover{background-color: #ddd;}
 .control-box .btn-control.image{border-right: 1px solid #ddd;}
 
+.control-set {display: none; position: absolute;border:1px solid #ccc;background-color: #fff;border-radius: 10px;box-shadow: 3px 3px 6px rgba(0,0,0,0.1);}
+.control-set.show {display: block;}
+.control-set.setting{width:250px;height:500px;right:-260px;top:0;}
+.control-set header {display: flex;justify-content: space-between;align-items: center; padding: 10px 15px;border-bottom: 1px solid #ddd;}
+.control-set .contents .image {position: relative; height:150px;text-align: center;background-color: #e1e7d6;}
+.control-set .contents .image img{height: 100%;}
+.control-set .contents.scroll {height: calc(100% - 51px); overflow-y: auto;}
+
+.control-set .contents .image .modify {position: absolute;left:0;bottom: 0;display: flex;justify-content: space-between;width:100%;height:50px; padding:10px 20px;background-color: rgba(97,150,5,.2);}
+.control-set .contents .image .modify button {width:90px;background-color: #fff;border: 0;border-radius: 30px;color:#416504}
+.control-set .contents .image .modify button:hover{background-color: #cfea9f;}
+.control-set .contents .image-reset {display: flex;justify-content: space-between;align-items: center; padding:10px 20px;color:#416504;border-bottom: 1px solid #ddd;}
+.control-set .contents .image-reset button {width:30px;height:30px;border: 0;background-color: #416504;color: #fff;border-radius: 5px;}
+
+.image-detail ul{display: flex;flex-direction: column;gap:15px;padding:10px;text-align: left;width: 100%;}
+.image-detail ul li label{display: block;font-size: .8rem;}
+.image-detail ul li input,
+.image-detail ul li select{width: 100%;height: 30px;margin-top: 5px;border: 1px solid #ccc;outline:none;}
+
+.control-set.crop {z-index: 10;bottom: 0;left:0;}
+.control-set.crop ul {display: flex;align-items: center;justify-content: space-between;width:100%;height:40px;}
+.control-set.crop .btn-reset{width:50px;height:30px;color:#fff;background-color:#416504;border-radius: 5px;}
+.control-set.crop .btn-cancel {width:50px;}
+.control-set.crop ul li {display:flex;align-items:center;height: 40px;padding:0 10px;}
+.control-set.crop ul li:not(:first-child) {border-left: 1px solid #ddd;}
+
+.control-set.animation{width:270px;height:500px;right:-270px;top:0;}
+.control-set.animation .contents {height:390px;}
+.control-set.animation .btn-custom {display:block;margin:15px auto 0;padding:5px 20px 7px;background-color: #416504;border-radius: 5px;color: #fff;}
+.list_animation {padding:10px 15px;}
+.list_animation ul {display: grid;grid-template-columns: repeat(3, 1fr);gap: 10px;}
+.list_animation ul li:hover{cursor: pointer;}
+.list_animation ul li>div {width:72px;height:72px;background-repeat: no-repeat;background-position: center;border-radius: 5px;}
+.list_animation ul li.on>div {border:2px solid #000;}
+.list_animation ul li.on:hover>div {background-color: #5999ff;background-image: url(../images/ico_play.png) !important;background-size: 35px;}
+.list_animation ul li p {padding-top: 5px; font-size: .8rem;text-align: center;color:#666}
+.list_animation ul li>div.none {background-image: url(../images/ico_animation_00.png);}
+.list_animation ul li>div.bounceIn {background-image: url(../images/ico_animation_01.png);}
+.list_animation ul li>div.glideIn {background-image: url(../images/ico_animation_02.png);}
+.list_animation ul li>div.fadeIn {background-image: url(../images/ico_animation_03.png);}
+.list_animation ul li>div.float {background-image: url(../images/ico_animation_04.png);}
+.list_animation ul li>div.zoomIn {background-image: url(../images/ico_animation_05.png);}
+.list_animation ul li>div.pinwheel {background-image: url(../images/ico_animation_06.png);}
+.list_animation ul li>div.fly {background-image: url(../images/ico_animation_07.png);}
+.list_animation ul li>div.rotate {background-image: url(../images/ico_animation_08.png);}
+.list_animation ul li>div.circle {background-image: url(../images/ico_animation_09.png);}
+.list_animation ul li>div.zoomOut {background-image: url(../images/ico_animation_10.png);}
+.list_animation ul li>div.happer {background-image: url(../images/ico_animation_11.png);}
+.list_animation ul li>div.flip {background-image: url(../images/ico_animation_12.png);}
+.list_animation ul li>div.show {background-image: url(../images/ico_animation_13.png);}
+.list_animation ul li>div.slideIn {background-image: url(../images/ico_animation_14.png);}
+
+.list_animation ul li>div.none:hover {background-image: url(../images/ico_animation_00_on.png);}
+.list_animation ul li>div.bounceIn:hover {background-image: url(../images/ico_animation_01_on.png);}
+.list_animation ul li>div.glideIn:hover {background-image: url(../images/ico_animation_02_on.png);}
+.list_animation ul li>div.fadeIn:hover {background-image: url(../images/ico_animation_03_on.png);}
+.list_animation ul li>div.float:hover {background-image: url(../images/ico_animation_04_on.png);}
+.list_animation ul li>div.zoomIn:hover {background-image: url(../images/ico_animation_05_on.png);}
+.list_animation ul li>div.pinwheel:hover {background-image: url(../images/ico_animation_06_on.png);}
+.list_animation ul li>div.fly:hover {background-image: url(../images/ico_animation_07_on.png);}
+.list_animation ul li>div.rotate:hover {background-image: url(../images/ico_animation_08_on.png);}
+.list_animation ul li>div.circle:hover {background-image: url(../images/ico_animation_09_on.png);}
+.list_animation ul li>div.zoomOut:hover {background-image: url(../images/ico_animation_10_on.png);}
+.list_animation ul li>div.happer:hover {background-image: url(../images/ico_animation_11_on.png);}
+.list_animation ul li>div.flip:hover {background-image: url(../images/ico_animation_12_on.png);}
+.list_animation ul li>div.show:hover {background-image: url(../images/ico_animation_13_on.png);}
+.list_animation ul li>div.slideIn:hover {background-image: url(../images/ico_animation_14_on.png);}
+
+.control-set.link{width:500px;height:400px;right:-270px;top:0;}
+.link_select {display: flex;height: calc(85% - 51px);}
+.link_select .select{width:40%;height:100%;padding: 15px; border-right:1px solid #ccc;}
+.link_select .select ul{display: flex;flex-direction: column;gap:10px;font-size: .9rem;}
+.link_select .select_view{width:60%;padding: 10px;}
+.link_select .select_view li {display: none;}
+.link_select .select_view li.active{display: block;}
+.control-set.link .buttons {display: flex;height: 15%;align-items: center; justify-content: space-between;padding:10px 20px;border-top: 1px solid #ccc;}
+
+.link_disconnect {text-align: center;}
+.link_disconnect img {width:50%;margin:50px 0 20px;}
+.link_disconnect h3 {font-weight: bold;font-size: 1.3rem;}
+.link_disconnect p {margin-top: 10px;color:#666;}
+.select_view {padding-top: 20px;}
+.select_view ul li label{display: block;font-size: .8rem;}
+.select_view ul li input,
+.select_view ul li select{width: 100%;height: 30px;margin-top: 5px;border: 1px solid #ccc;outline:none;}
+.select_view .linkopen {margin-top: 20px;}
+.select_view .linkopen>div{margin-top: 20px;}

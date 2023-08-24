@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/reset.css" rel="stylesheet" />
     <link href="css/inner.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/jquery-3.7.0.min.js"></script>
     <title>Inner Document</title>
+    <script>
+        $(document).ready(function(){
+            $('.select input[type="radio"]').on('change', function() {
+                const index = $(this).closest('li').index();
+                $('.select_view li').removeClass('active');
+                $('.select_view li').eq(index).addClass('active');
+            });
+        });
+    </script>
 </head>
 <body style="background-color: white;">
-    <div class="img-set" style="left:50%;top:50%;">
+    <div class="img-set" style="left:100px;top:200px;">
         <img src="./images/thumb_img_01.jpg" width="300px">
         <div class="control-box">
             <button class="btn-control image">이미지 변경</button>
@@ -17,6 +28,203 @@
             <button class="btn-control"> <i class="fas fa-spinner fa-spin"></i></button>
             <button class="btn-control"><i class="fas fa-link"></i></button>
             <button class="btn-control more"><i class="fas fa-ellipsis-h"></i></button>
+        </div>
+        <div class="control-set setting ">
+            <header>
+                <div class="tit">설정</div>
+                <button class="btn-close"><i class="fas fa-times"></i></button>
+            </header>
+            <div class="contents scroll">
+                <div class="image">
+                    <img src="./images/thumb_img_01.jpg">
+                    <div class="modify">
+                        <button class="btn-change"><i class="fas fa-sync"></i> 변경</button>
+                        <button class="btn-adjust"><i class="fas fa-sliders-h"></i> 조정</button>
+                    </div>
+                </div>
+                <div class="image-reset">
+                    이미지 초기화
+                    <button><i class="fas fa-redo"></i></button>
+                </div>
+                <div class="image-detail">
+                    <ul>
+                        <li>
+                            <label>표시모드</label>
+                            <select>
+                                <option>테두리 상자 채우기</option>
+                                <option>테두리 상자 맞추기</option>
+                                <option>이미지 비율 유지</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label>이미지 클릭시</label>
+                            <select>
+                                <option>테두리 상자 채우기</option>
+                                <option>테두리 상자 맞추기</option>
+                                <option>이미지 비율 유지</option>
+                            </select>        
+                        </li>
+                        <li>
+                            <label>스크롤 동장</label>
+                            <select>
+                                <option>없음</option>
+                                <option>패럴랙스</option>
+                                <option>드러내기</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="image-detail">
+                    <ul>
+                        <li>
+                            <label>이미지 설명(대체 텍스트)</label>
+                            <input type="text" placeholder="대체 텍스트를 입력하세요.">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="control-set crop">
+            <ul>
+                <li><button class="btn-minus"><i class="fa fa-minus"></i></button>
+                    <input type="range" min="0" max="100" value="50" id="mySlider">
+                    <button class="btn-minus"><i class="fa fa-plus"></i></button>
+                </li>
+                <li class="refresh"><button><i class="fas fa-redo"></i></button></li>
+                <li><button class="btn-cancel">취소</button><button class="btn-reset">적용</button></li>
+            </ul>
+        </div>
+        <div class="control-set animation">
+            <header>
+                <div class="tit">애니메이션 선택</div>
+                <button class="btn-close"><i class="fas fa-times"></i></button>
+            </header>
+            <div class="contents scroll">
+                <div class="list_animation">
+                    <ul>
+                        <li>
+                            <div class="none"></div>
+                            <p>없음</p>
+                        </li>
+                        <li class="on">
+                            <div class="bounceIn"></div>
+                            <p>바운스인</p>
+                        </li>
+                        <li>
+                            <div class="glideIn"></div>
+                            <p>글라이드인</p>
+                        </li>
+                        <li>
+                            <div class="fadeIn"></div>
+                            <p>페이드인</p>
+                        </li>
+                        <li>
+                            <div class="float"></div>
+                            <p>떠다니기</p>
+                        </li>
+                        <li>
+                            <div class="zoomIn"></div>
+                            <p>확대하기</p>
+                        </li>
+                        <li>
+                            <div class="pinwheel"></div>
+                            <p>바람개비</p>
+                        </li>
+                        <li>
+                            <div class="fly"></div>
+                            <p>날아오기</p>
+                        </li>
+                        <li>
+                            <div class="rotate"></div>
+                            <p>회전하기</p>
+                        </li>
+                        <li>
+                            <div class="circle"></div>
+                            <p>원그리기</p>
+                        </li>
+                        <li>
+                            <div class="zoomOut"></div>
+                            <p>축소하기</p>
+                        </li>
+                        <li>
+                            <div class="happer"></div>
+                            <p>당겨접기</p>
+                        </li>
+                        <li>
+                            <div class="flip"></div>
+                            <p>뒤집기</p>
+                        </li>
+                        <li>
+                            <div class="show"></div>
+                            <p>드러내기</p>
+                        </li>
+                        <li>
+                            <div class="slideIn"></div>
+                            <p>슬라이드인</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="btn-custom">사용자 지정</button>
+        </div>
+        <div class="control-set link show">
+            <header>
+                <div class="tit">링크 대상</div>
+                <button class="btn-close"><i class="fas fa-times"></i></button>
+            </header>
+            <div class="link_select">
+                <div class="select">
+                    <ul>
+                        <li><input type="radio" name="link" id="rad1"><label for="rad1">없음</label></li>
+                        <li><input type="radio" name="link" id="rad2"><label for="rad2">페이지</label></li>
+                        <li><input type="radio" name="link" id="rad3"><label for="rad3">웹 주소</label></li>
+                        <li><input type="radio" name="link" id="rad4"><label for="rad4">앵커</label></li>
+                        <li><input type="radio" name="link" id="rad5"><label for="rad5">페이지 상단 및 하단</label></li>
+                        <li><input type="radio" name="link" id="rad6"><label for="rad6">문서</label></li>
+                        <li><input type="radio" name="link" id="rad7"><label for="rad7">이메일</label></li>
+                        <li><input type="radio" name="link" id="rad8"><label for="rad8">전화번호</label></li>
+                        <li><input type="radio" name="link" id="rad9"><label for="rad9">라이트박스</label></li>
+                    </ul>
+                </div>
+                <div class="select_view">
+                    <ul>
+                        <li class="active">
+                            <div class="link_disconnect">
+                                <img src="./images/link_disconnect.png">
+                                <h3>링크없음</h3>
+                                <p>내 요소의 링크 대상을 선택하세요.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <label>페이지</label>
+                            <select>
+                                <option>페이지를 선택하세요</option>
+                                <option>Home (형재 페이지)</option>
+                                <option>페이지명 01</option>
+                                <option>페이지명 02</option>
+                                <option>페이지명 03</option>
+                            </select>
+                            <hr>
+                            <div class="linkopen">
+                                <label>링크열기</label>
+                                <div><input type="radio" name="linkopen" id="chk1"><label for="chk1">새 창에서 열기</label></div>
+                                <div><input type="radio" name="linkopen" id="chk2"><label for="chk2">현재 창에서 열기</label></div>
+                            </div>
+                        </li>
+                        <li>웹주소</li>
+                        <li>앵커</li>
+                        <li>페이지 상단 및 하단</li>
+                        <li>문서</li>
+                        <li>이메일</li>
+                        <li>전화번호</li>
+                        <li>라이트박스</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="btn-cancel">취소</button>
+                <button class="btn-ok" disabled>완료</button>
+            </div>
         </div>
     </div>
 </body>

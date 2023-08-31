@@ -15,6 +15,23 @@
                 $('.select_view li').removeClass('active');
                 $('.select_view li').eq(index).addClass('active');
             });
+            $('.btn-close, .btn-cancel').on('click',function(){
+                $(this).parents('.control-set').removeClass('show');
+            })
+            $("#file-select").on("click", function() {
+                $("input[type='file']").click();
+            });
+            $(".btn-control").click(function() {
+                // Hide all control-sets
+                $(".control-set").removeClass("show");
+
+                // Determine the corresponding control-set class
+                var controlSetName = $(this).attr("class").split(" ")[1];
+                var correspondingControlSet = "." + controlSetName;
+
+                // Show the corresponding control-set
+                $(correspondingControlSet).addClass("show");
+            });
         });
     </script>
 </head>
@@ -22,11 +39,11 @@
     <div class="img-set" style="left:100px;top:200px;">
         <img src="./images/thumb_img_01.jpg" width="300px">
         <div class="control-box">
-            <button class="btn-control image">이미지 변경</button>
-            <button class="btn-control"><i class="fas fa-cog"></i></button>
-            <button class="btn-control"><i class="fas fa-crop"></i></button>
-            <button class="btn-control"> <i class="fas fa-spinner fa-spin"></i></button>
-            <button class="btn-control"><i class="fas fa-link"></i></button>
+            <button class="btn-control image" onclick="parent.showImageModify()">이미지 변경</button>
+            <button class="btn-control setting"><i class="fas fa-cog"></i></button>
+            <button class="btn-control crop"><i class="fas fa-crop"></i></button>
+            <button class="btn-control animation"> <i class="fas fa-spinner fa-spin"></i></button>
+            <button class="btn-control link"><i class="fas fa-link"></i></button>
             <button class="btn-control more"><i class="fas fa-ellipsis-h"></i></button>
         </div>
         <div class="control-set setting ">
@@ -167,7 +184,7 @@
             </div>
             <button class="btn-custom">사용자 지정</button>
         </div>
-        <div class="control-set link show">
+        <div class="control-set link">
             <header>
                 <div class="tit">링크 대상</div>
                 <button class="btn-close"><i class="fas fa-times"></i></button>
@@ -211,11 +228,48 @@
                                 <div><input type="radio" name="linkopen" id="chk2"><label for="chk2">현재 창에서 열기</label></div>
                             </div>
                         </li>
-                        <li>웹주소</li>
-                        <li>앵커</li>
-                        <li>페이지 상단 및 하단</li>
-                        <li>문서</li>
-                        <li>이메일</li>
+                        <li>
+                            <label>웹주소</label>
+                            <input type="text">
+                            <hr>
+                            <div class="linkopen">
+                                <label>링크열기</label>
+                                <div><input type="radio" name="linkopen" id="chk1"><label for="chk1">새 창에서 열기</label></div>
+                                <div><input type="radio" name="linkopen" id="chk2"><label for="chk2">현재 창에서 열기</label></div>
+                            </div>
+                        </li>
+                        <li>
+                            <label>앵커</label>
+                            <select>
+                                <option>페이지를 선택하세요</option>
+                                <option>Home (형재 페이지)</option>
+                                <option>페이지명 01</option>
+                                <option>페이지명 02</option>
+                                <option>페이지명 03</option>
+                            </select>
+                        </li>
+                        <li>
+                            <p>방문자가 페이지 상단 및 하단으로 이동하기 편리하도록 설정하세요.</p>
+                            <div class="page_move">
+                                <button class="active"><img src="./images/ico_page_top.png"><p>상단</p></button>
+                                <button><img src="./images/ico_page_bottom.png"><p>하단</p></button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="document">
+                                <p>문서를 선택하세요:</p>
+                                <button class="btn btn-cancel" id="file-select">파일선택</button>
+                                <input type="file" style="display:none">
+                                <div class="selectfile"><span class="ico-check"><i class="fas fa-check"></i></span>선택된 파일.zip</div>
+                            </div>
+                        </li>
+                        <li>
+                            <label>이메일 주소</label>
+                            <input type="text" placeholder="이메일 주소를 입력해주세요.">
+                            <hr>
+                            <label>이메일 제목</label>
+                            <input type="text" placeholder="이메일 제목을 입력해주세요.">
+                        </li>
                         <li>전화번호</li>
                         <li>라이트박스</li>
                     </ul>

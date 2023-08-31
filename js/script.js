@@ -29,5 +29,32 @@ $(document).ready(function(){
         $(this).addClass('active');
         $(this).parents('.dep-3').next().find('.item-content>ul>li').eq(liIndex).addClass('active').siblings().removeClass('active');
     });
-
+    $('.js-select').select2({
+        minimumResultsForSearch: Infinity // 검색 기능 비활성화
+    });
+    $('.js-select-color').select2({
+        minimumResultsForSearch: Infinity, // 검색 기능 비활성화
+        templateResult: customTemplate
+    });
+    
+    function customTemplate(option) {
+        if (!option.id) {
+            return option.text;
+        }
+        var style = option.element.getAttribute('data-custom-style');
+        return $('<div style="' + style + '">' + option.text + '</div>');
+    }
+    $('.btn-previewimg').on('click',function(){
+        $('.pop_preview').addClass('show');
+    })
+    $('.pop_preview .btn-close').on('click',function(){
+        $(this).parents('.pop_preview').removeClass('show');
+    })
+    $('.image-modify .btn-close').on('click',function(){
+        $(this).parents('.image-modify').removeClass('show');
+    })
 });
+function showImageModify(){
+    var parentContent = $('.image-modify')
+    parentContent.addClass('show');
+}

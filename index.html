@@ -11,6 +11,9 @@
     <link href="css/global.css" rel="stylesheet" />
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/js/select2.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
     <script src="js/script.js"></script>
 </head>
 
@@ -693,6 +696,409 @@
 
                 </ul>
                 
+            </div>
+        </div>
+    </div>
+    <div class="pop image-modify">
+        <div class="pop_contents">
+            <h3>이미지 변경
+                <button class="btn-close"><i class="fas fa-times"></i></button>
+            </h3>
+            <div class="pop_main">
+                <div class="submenu">
+                    <button class="btn-upload">+ 미디어 업로드</button>
+                    <div class="menu">
+                        <ul>
+                            <li><button>메인</button></li>
+                            <li><button>메뉴명1</button></li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <div class="tit">관리</div>
+                        <ul>
+                            <li><button>사이트 파일</button></li>
+                            <li><button>내 보드</button></li>
+                            <li><button>휴지통</button></li>
+                        </ul>
+                        <div class="tit">둘러보기</div>
+                        <ul>
+                            <li><button>MathAlive 미디어</button></li>
+                            <li><button>Shutterstock</button></li>
+                            <li><button>Unsplash</button></li>
+                        </ul>
+                    </div>
+                    <div class="storage">
+                        <div class="usage">
+                            <span>0MB</span> / 
+                            <span>500MB</span> 사용 중
+                        </div>
+                        <div class="bar_wrap">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pop_content">
+                    <div class="search">
+                        <input type="text" placeholder="비즈니스, 패션, 피트니스 등">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="media">
+                        <h4>Mathalive 미디어</h4>
+                        <p>방대한 수천 가지의 이미지 중 원하는 이미지를 찾아보세요.</p>
+                        <div class="filter">
+                            <span class="tit">필터:</span>
+                            <select class="js-select" style="width:150px">
+                                <option>이미지</option>
+                                <option>일러스트레이션</option>
+                            </select>
+                            <select class="js-select" style="width:150px">
+                                <option>전체</option>
+                                <option>홈가드닝</option>
+                                <option>시네마 그래프</option>
+                                <option>산업</option>
+                                <option>추상적</option>
+                                <option>라이프스타일</option>
+                                <option>동물 및 자연</option>
+                                <option>정물</option>
+                                <option>건축 및 인테리어</option>
+                                <option>음악</option>
+                                <option>예술</option>
+                                <option>사람</option>
+                                <option>흑백</option>
+                                <option>제품</option>
+                                <option>비즈니스</option>
+                                <option>스포츠 레크레이션</option>
+                                <option>패션 및 뷰티</option>
+                                <option>기술</option>
+                                <option>건강 및 과학</option>
+                                <option>여행 및 교통</option>
+                                <option>음식 및 음료</option>
+                                <option>결혼 및 기념일</option>
+                                <option>휴일 및 이벤트</option>
+                            </select>
+                            <select class="js-select"  style="width:150px">
+                                <option>방향</option>
+                                <option>전체</option>
+                                <option>가로</option>
+                                <option>세로</option>
+                            </select>
+                            <select class="js-select-color" style="width:150px">
+                                <optgroup label="모든색상">
+                                    <option data-custom-style="background: linear-gradient(90deg, rgba(231,10,10,1) 0%, rgba(213,96,6,1) 16%, rgba(255,241,23,1) 32%, rgba(77,201,65,1) 48%, rgba(8,36,212,1) 66%, rgba(16,28,106,1) 82%, rgba(156,50,255,1) 100%);color:#fff">모든색상</option>
+                                </optgroup>
+                                <optgroup label="블랙앤화이트">
+                                    <option data-custom-style="background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);color:#fff">블랙앤화이트</option>
+                                </optgroup>
+                                <optgroup label="특정색상">
+                                    <option data-custom-style="background-color: #dd2020;color:#fff">빨강</option>
+                                    <option data-custom-style="background-color: #fe761b;color:#fff">주황</option>
+                                    <option data-custom-style="background-color: #fad12c;color:#fff">노랑</option>
+                                    <option data-custom-style="background-color: #94c61e;color:#fff">초록</option>
+                                    <option data-custom-style="background-color: #2febdc;color:#fff">하늘</option>
+                                    <option data-custom-style="background-color: #0d6ee6;color:#fff">파랑</option>
+                                    <option data-custom-style="background-color: #7417e8;color:#fff">보라</option>
+                                    <option data-custom-style="background-color: #f641cd;color:#fff">분홍</option>
+                                    <option data-custom-style="background-color: #b3623a;color:#fff">갈색</option>
+                                    <option data-custom-style="background-color: #ffffff;">흰색</option>
+                                    <option data-custom-style="background-color: #7b7b7b;color:#fff">회색</option>
+                                    <option data-custom-style="background-color: #000000;color:#fff">검정</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="images">
+                            <div class="image-container">
+                                <div class="image-item" style="background-image: url(../images/temp_img_01.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">전시회 전시회 전시회 전시회 전시회 전시회 전시회 전시회</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_02.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사무실에서 서류를 검토중인 사람</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_03.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_04.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_05.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_06.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_07.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_08.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_09.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_10.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_01.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_02.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_03.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_04.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_05.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_06.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_07.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_08.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_09.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_10.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_01.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_02.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_03.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_04.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_05.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_06.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_07.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_08.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_09.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                                <div class="image-item" style="background-image: url(../images/temp_img_10.jpg);">
+                                    <div class="cnt">
+                                        <div class="header">
+                                            <button class="btn-previewimg"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-favorite"><i class="fas fa-star"></i></button>
+                                        </div>
+                                        <div class="title">사진제목</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <button class="btn-update">업데이트</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pop_preview">
+                <div class="image_info">
+                    <p>사진제목</p>
+                    <p>1234 x 567</p>
+                    <button class="btn-close"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="stage">
+                    <img src="../images/temp_img_01.jpg">
+                    <button class="btn-prev"><i class="fas fa-arrow-left"></i></button>
+                    <button class="btn-next"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="footer">
+                    <button class="btn-update">업데이트</button>
+                </div>
             </div>
         </div>
     </div>
